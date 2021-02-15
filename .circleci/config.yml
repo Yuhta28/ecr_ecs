@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - run: bundle install
-      - run: bundle exec ruby e2e.rb "https://google.com"
+      - run: bundle exec ruby e2e.rb "http://circleci-book-alb-1645331006.ap-northeast-1.elb.amazonaws.com/"
 
 workflows:
   build-and-deploy:
