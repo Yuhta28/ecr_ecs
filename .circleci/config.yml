@@ -31,6 +31,6 @@ workflows:
           cluster-name: 'circleci-book-cluster'
           container-image-name-updates: 'container=circleci-book-container,image-and-tag=${AWS_ECR_ACCOUNT_URL}/nginx:${CIRCLE_SHA1}'
 
-  #    - run_e2e_test:
-  #        requires:
-  #          - aws-ecs/deploy-service-update
+      - run_e2e_test:
+          requires:
+            - aws-ecs/deploy-service-update
